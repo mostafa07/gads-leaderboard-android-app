@@ -51,10 +51,11 @@ dependencies {
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.1'
 
     // RxJava
-    implementation 'com.netflix.rxjava:rxjava-android:0.16.1'
+    implementation 'io.reactivex:rxjava:1.1.0'
 
-    // Seismic
-    implementation 'com.squareup:seismic:1.0.2'
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     // Test Dependencies
     testImplementation 'junit:junit:4.13'
