@@ -2,7 +2,7 @@ package com.example.gads.leaderboard.data.repository;
 
 import com.example.gads.leaderboard.data.model.LearningHoursProfile;
 import com.example.gads.leaderboard.data.model.SkillIqProfile;
-import com.example.gads.leaderboard.webservice.builder.LeaderboardWebService;
+import com.example.gads.leaderboard.webservice.LeaderboardWebService;
 import com.example.gads.leaderboard.webservice.builder.RetrofitServiceBuilder;
 
 import org.jetbrains.annotations.NotNull;

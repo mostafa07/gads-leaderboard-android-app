@@ -1,4 +1,4 @@
-package com.example.gads.leaderboard.webservice.builder;
+package com.example.gads.leaderboard.webservice;
 
 import com.example.gads.leaderboard.common.ApiEndPoints;
 import com.example.gads.leaderboard.data.model.LearningHoursProfile;
