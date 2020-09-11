@@ -8,7 +8,7 @@ import com.example.gads.leaderboard.data.model.LearningHoursProfile;
 import com.example.gads.leaderboard.data.model.SkillIqProfile;
 import com.example.gads.leaderboard.data.repository.LeaderboardRepository;
 
-import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class LeaderboardViewModel extends ViewModel {
@@ -33,12 +33,14 @@ public class LeaderboardViewModel extends ViewModel {
 
     public void getLearningHoursProfiles() {
         mLeaderboardRepository.getLearningHoursProfiles().subscribe(learningHoursProfiles -> {
+            Collections.sort(learningHoursProfiles, (o1, o2) -> o2.getHours().compareTo(o1.getHours()));
             mLearningHoursProfileListMutableLiveData.setValue(learningHoursProfiles);
         }, Throwable::printStackTrace);
     }
 
     public void getSkillIqProfiles() {
         mLeaderboardRepository.getSkillIqProfiles().subscribe(skillIqProfiles -> {
+            Collections.sort(skillIqProfiles, (o1, o2) -> o2.getScore().compareTo(o1.getScore()));
             mSkillIqProfileListMutableLiveData.setValue(skillIqProfiles);
         }, Throwable::printStackTrace);
     }
