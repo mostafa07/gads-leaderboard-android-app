@@ -51,7 +51,6 @@ public class LeaderboardRepository {
                     subscriber.onError(t);
                 }
             });
-            subscriber.onCompleted();
         });
     }
 
@@ -71,7 +70,6 @@ public class LeaderboardRepository {
                     subscriber.onError(t);
                 }
             });
-            subscriber.onCompleted();
         });
     }
 }

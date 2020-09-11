@@ -6,4 +6,7 @@
     <string name="are_you_sure_prompt">Are you sure?</string>
 
     <string name="yes">Yes</string>
+
+    <string name="learning_leaders">Learning Leaders</string>
+    <string name="skill_iq_leaders">Skill IQ Leaders</string>
 </resources>
