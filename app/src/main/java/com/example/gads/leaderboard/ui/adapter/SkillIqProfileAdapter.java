@@ -7,8 +7,8 @@ import com.example.gads.leaderboard.ui.adapter.base.BaseRecyclerViewAdapter;
 
 public class SkillIqProfileAdapter extends BaseRecyclerViewAdapter<SkillIqProfile> {
 
-    public SkillIqProfileAdapter() {
-        super();
+    public SkillIqProfileAdapter(OnItemClickListener<SkillIqProfile> onItemClickListener) {
+        super(onItemClickListener);
     }
 
     @Override

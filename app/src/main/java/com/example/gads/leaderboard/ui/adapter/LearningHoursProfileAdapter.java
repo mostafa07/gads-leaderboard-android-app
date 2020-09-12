@@ -7,8 +7,8 @@ import com.example.gads.leaderboard.ui.adapter.base.BaseRecyclerViewAdapter;
 
 public class LearningHoursProfileAdapter extends BaseRecyclerViewAdapter<LearningHoursProfile> {
 
-    public LearningHoursProfileAdapter() {
-        super();
+    public LearningHoursProfileAdapter(OnItemClickListener<LearningHoursProfile> onItemClickListener) {
+        super(onItemClickListener);
     }
 
     @Override

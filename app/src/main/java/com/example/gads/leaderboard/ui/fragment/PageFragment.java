@@ -1,6 +1,7 @@
 package com.example.gads.leaderboard.ui.fragment;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ import com.example.gads.leaderboard.ui.adapter.SkillIqProfileAdapter;
 import com.example.gads.leaderboard.ui.viewmodel.LeaderboardViewModel;
 
 public class PageFragment extends Fragment {
+
+    private static final String LOG_TAG = PageFragment.class.getSimpleName();
 
     private FragmentPageBinding mBinding;
     private LeaderboardViewModel mLeaderboardViewModel;
@@ -40,8 +43,12 @@ public class PageFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        mLearningHoursProfileAdapter = new LearningHoursProfileAdapter();
-        mSkillIqProfileAdapter = new SkillIqProfileAdapter();
+        mLearningHoursProfileAdapter = new LearningHoursProfileAdapter(dataItem -> {
+            Log.d(LOG_TAG, "On Learning Hours Profile Item Clicked");
+        });
+        mSkillIqProfileAdapter = new SkillIqProfileAdapter(dataItem -> {
+            Log.d(LOG_TAG, "On Skill IQ Profile Item Clicked");
+        });
 
         final Bundle args = getArguments();
         final int position = args.getInt(ARG_OBJECT);
