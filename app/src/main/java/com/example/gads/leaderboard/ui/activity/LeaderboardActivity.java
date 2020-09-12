@@ -1,5 +1,6 @@
 package com.example.gads.leaderboard.ui.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -34,10 +35,8 @@ public class LeaderboardActivity extends AppCompatActivity {
         setupViewPager();
 
         setupViewModelObservations();
-    }
 
-    private void setupViewModelObservations() {
-
+        setupButtons();
     }
 
     private void setupViewPager() {
@@ -53,6 +52,15 @@ public class LeaderboardActivity extends AppCompatActivity {
         }).attach();
     }
 
+    private void setupViewModelObservations() {
+
+    }
+
+    private void setupButtons() {
+        mBinding.appBarLayout.submitButton.setOnClickListener(view -> {
+            startActivity(new Intent(LeaderboardActivity.this, ProjectSubmissionActivity.class));
+        });
+    }
 
     private void showSuccessDialog() {
         SuccessDialog successDialog = SuccessDialog.newInstance();
