@@ -1,9 +1,11 @@
 <resources>
     <string name="app_name">GADS Leaderboard</string>
+    <string name="leaderboard">Leaderboard</string>
 
     <string name="submission_successful">Submission Successful</string>
     <string name="submission_not_successful">Submission not Successful</string>
     <string name="are_you_sure_prompt">Are you sure?</string>
+    <string name="submit">Submit</string>
 
     <string name="yes">Yes</string>
 
