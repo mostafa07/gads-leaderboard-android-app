@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.example.gads.leaderboard.R;
 import com.example.gads.leaderboard.databinding.ActivityProjectSubmissionBinding;
+import com.example.gads.leaderboard.ui.dialog.ErrorDialog;
 import com.example.gads.leaderboard.ui.dialog.SuccessDialog;
 import com.example.gads.leaderboard.ui.viewmodel.ProjectSubmissionViewModel;
 
@@ -38,7 +39,7 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
             if (isSubmitted) {
                 showSuccessDialog();
             } else {
-
+                showErrorDialog();
             }
         });
     }
@@ -49,7 +50,12 @@ public class ProjectSubmissionActivity extends AppCompatActivity {
 
 
     private void showSuccessDialog() {
-        SuccessDialog successDialog = SuccessDialog.newInstance();
+        final SuccessDialog successDialog = SuccessDialog.newInstance();
         successDialog.show(getSupportFragmentManager(), LeaderboardActivity.class.getSimpleName());
+    }
+
+    private void showErrorDialog() {
+        final ErrorDialog errorDialog = ErrorDialog.newInstance();
+        errorDialog.show(getSupportFragmentManager(), LeaderboardActivity.class.getSimpleName());
     }
 }
