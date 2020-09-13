@@ -10,7 +10,6 @@ import androidx.lifecycle.ViewModelProvider;
 import com.example.gads.leaderboard.R;
 import com.example.gads.leaderboard.databinding.ActivityLeaderboardBinding;
 import com.example.gads.leaderboard.ui.adapter.FragmentPageAdapter;
-import com.example.gads.leaderboard.ui.dialog.SuccessDialog;
 import com.example.gads.leaderboard.ui.viewmodel.LeaderboardViewModel;
 import com.google.android.material.tabs.TabLayoutMediator;
 
@@ -60,10 +59,5 @@ public class LeaderboardActivity extends AppCompatActivity {
         mBinding.appBarLayout.submitButton.setOnClickListener(view -> {
             startActivity(new Intent(LeaderboardActivity.this, ProjectSubmissionActivity.class));
         });
-    }
-
-    private void showSuccessDialog() {
-        SuccessDialog successDialog = SuccessDialog.newInstance();
-        successDialog.show(getSupportFragmentManager(), LeaderboardActivity.class.getSimpleName());
     }
 }
